@@ -35,4 +35,4 @@ Opciones:
     elif opcion == 4:
         break
     else:
-        print("Opcion no disponible")
+        print("Opción no disponible")
