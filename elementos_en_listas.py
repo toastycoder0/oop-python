@@ -30,7 +30,7 @@ Opciones:
         else:
             print("Elemento no encontrado")
     elif opcion == 3:
-        print("Lista:")
+        print("Elementos en la lista:")
         for elemento in lista:
             print(elemento)
     elif opcion == 4:
