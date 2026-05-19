@@ -1,6 +1,10 @@
 import os
 
 
+class ErrorDeSaldo(ValueError):
+    """Error lanzado cuando el saldo es negativo."""
+
+
 class Cuenta:
     def __init__(self, cuenta, saldo_inicial):
         self.__cuenta = cuenta
@@ -31,7 +35,7 @@ class Cuenta:
         except ValueError:
             raise TypeError("El depósito debe ser un número válido.")
         if cantidad <= 0:
-            raise ValueError("El depósito debe ser mayor que cero.")
+            raise ErrorDeSaldo("El depósito debe ser mayor que cero.")
         self.saldo += cantidad
 
     def retirar(self, cantidad):
@@ -42,7 +46,7 @@ class Cuenta:
         if cantidad <= 0:
             raise ValueError("El retiro debe ser mayor que cero.")
         if cantidad > self.saldo:
-            raise ValueError("Saldo insuficiente para realizar el retiro.")
+            raise ErrorDeSaldo("Saldo insuficiente para realizar el retiro.")
         self.saldo -= cantidad
 
 
