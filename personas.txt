@@ -1,0 +1,4 @@
+Nombre Jose
+Edad 18
+Correo jose@gmail.com
+---------------------------
